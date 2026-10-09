@@ -1,0 +1,8 @@
+{
+  "name": "@repro/demo",
+  "version": "1.0.0",
+  "files": [
+    "runtime",
+    "transform"
+  ]
+}

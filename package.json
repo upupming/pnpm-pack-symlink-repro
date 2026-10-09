@@ -1,0 +1,9 @@
+{
+  "name": "pnpm-pack-symlink-repro",
+  "private": true,
+  "packageManager": "pnpm@12.9.1",
+  "scripts": {
+    "reproduce": "rm -rf pack && mkdir pack && pnpm --filter @repro/demo pack --pack-destination pack && tar -xzf pack/repro-demo-1.0.0.tgz -C pack",
+    "verify": "test -L pack/package/runtime/node_modules/@repro/transform && tar -tvf pack/repro-demo-1.0.0.tgz | grep '^l.*package/runtime/node_modules/@repro/transform'"
+  }
+}
